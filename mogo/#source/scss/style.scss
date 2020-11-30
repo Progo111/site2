@@ -1,0 +1,556 @@
+//ФАЙЛ ОБНУЛЕНИЯ
+@import "nullstyle.scss";
+//ФАЙЛ ОБНУЛЕНИЯ
+
+//ШРИФТЫ
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@font-face {
+    font-family: "Playfair Display - Black";
+    src: url('../fonts/PlayfairDisplay-Black.eot');
+    src: local('☺'), url('../fonts/PlayfairDisplay-Black.woff') format('woff'), url('../fonts/PlayfairDisplay-Black.ttf') format('truetype'), url('../fonts/PlayfairDisplay-Black.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//ШРИФТЫ
+// ШРИФТ ПО УМОЛЧАНИЮ
+$fontfamily:'Josefin Sans';
+// ШРИФТ ПО УМОЛЧАНИЮ
+
+// ПЕРЕМЕННЫЕ
+$minw: 320px;
+$mw: 1100px;
+$md1: $mw + 12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+// ПЕРЕМЕННЫЕ
+
+//КАРТИНКА
+.ibg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	.ibg img {
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+//КАРТИНКА
+body {
+	font-style: 'Josefin Sans';
+    background-color: #eaeaea;
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+}
+
+.container {
+    padding: 0 15px;
+	max-width: $mw;
+	margin: 0 auto;
+}
+
+.header-logo{
+    display: flex;
+    justify-content: center;
+    margin:120px 0;
+}
+// OFFER
+.offer.container {}
+.offer-content {
+    background-image: url('../../img/Photo-offer.png');
+    box-shadow: 0 0 13px rgba(11, 12, 12, 0.15);
+    margin-bottom: 85px;
+}
+.offer-content__body {
+    padding: 50px 0 65px 90px;
+}
+.offer-content__cap {
+    margin-bottom: 35px;
+}
+.offer-content__title {
+    color: #921026;
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    margin-bottom: 25px;
+}
+.offer-content__text {
+    max-width: 312px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+}
+.offer-content__btn {}
+.btn {
+    border: 1px solid #c2c2c2;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 10px 15px;
+}
+//OFFER
+
+// FOOD
+.food{
+    margin-bottom: 80px;
+}
+
+.food-menu{
+    background-color: #ffffff;
+    box-shadow: 0 0 13px rgba(11, 12, 12, 0.15);
+    padding: 40px 53px 0;
+}
+
+.food__row{
+    display: flex;
+    justify-content: center;
+}
+
+.food__item{
+    padding: 0 15px;
+    margin-bottom: 40px;
+    &:first-child{
+        padding: 0 15px 0 0;
+    }
+    &:last-child{
+        padding: 0 0 0 15px;
+    }
+    .food__name{
+        padding: 10px 0 5px;
+        color: #333;
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.45px;
+    }
+    .food__icon{
+        position: relative;
+        padding: 0 0 0 12px;
+        color: #555555;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+    }
+    .food__icon:before{
+        content: url('../../img/icon/Clock_Icon.png');
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+//FOOD
+//RECIPE
+.recipe__content {
+    background-color: #ffffff;
+    box-shadow: 0 0 13px rgba(11, 12, 12, 0.15);
+    margin-bottom: 80px;
+}
+
+.recipe__row {
+    display: flex;
+}
+
+.recipe-item {
+    padding: 30px 50px 0 40px;
+    max-height: 460px;  
+    .recipe-item__name{
+        font-family: "Playfair Display - Black";
+        color: #055555;
+        font-size: 32px;
+        letter-spacing: 0.8px;
+        margin-bottom: 25px;
+    }
+    .recipe-item__row{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        color: #555555;
+        font-weight: 300;
+        .time {
+            font-size: 16px;
+            letter-spacing: 0.4px;
+            position: relative;
+            padding-left: 16px;
+        }
+        .time:before{
+            content: url('../../img/icon/Clock_Icon_big.png');
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .net {
+            font-size: 18px;
+            letter-spacing: 0.45px;
+            position: relative;
+            padding-left: 35px;
+        }
+        .net:before{
+            content: url('../../img/icon/Net.png');
+            position: absolute;
+            top: -10px;
+            left: 2px;
+        }
+    }
+    .recipe-item__text {
+        overflow: auto;
+        max-width: 495px;
+        max-height: 265px;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 300;
+        span {
+            display: inline-block;
+            font-weight: 700;
+            padding: 25px 0;
+        }
+    }
+}
+//RECIPE
+//REVIEW
+
+.review__row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.review__square {
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    width: 500px;
+    padding: 23px 35px 0;
+    margin-bottom: 80px;
+    .review__author{
+        position: relative;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        margin-bottom: 35px;
+    }
+    .review__author:after{
+        content: "";
+        display: block;
+        width: 440px;
+        height: 2px;
+        background-color: #dadbdb;
+
+        position: absolute;
+        top: 23px;
+        left: 0;
+    }
+    .review__content {
+        display: flex;
+        .review__img{
+            padding: 0 22px 0 0;
+        }
+    }
+}
+
+.review__info {
+    .review__name{
+        color: #000000;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        margin-bottom: 6px;
+    }
+    .review__country{
+        color: #000000;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 0.4px;
+        margin-bottom: 12px;
+    }
+    .review__icon{
+        position: relative;
+        margin-bottom: 40px;
+    }
+    .review__icon:after{
+        content: "";
+        display: block;
+        width: 291px;
+        height: 2px;
+        background-color: #dadbdb;
+
+        position: absolute;
+        top: 27px;
+        left: 0;
+    }
+    .review__state-name{
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        margin-bottom: 32px;
+    }
+    .review__state-text{
+                /* Style for "Over the f" */
+        width: 288px;
+        height: 148px;
+        color: #000000;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 14px;
+        letter-spacing: 0.35px;
+        margin-bottom: -3px;
+    }
+    .review__signature{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.review-error{
+    .error__img{
+        display: flex;
+        justify-content: center;
+    }
+    .error__btn{
+        display: flex;
+        justify-content: center;
+        padding: 35px 0 32px;
+        .btn{
+            width: 105px;
+            text-align: center;
+        }
+    }
+}
+//REVIEW
+//NEWS
+.by{
+    font-weight: 300;
+    letter-spacing: 0.4px;
+}
+
+.line{
+    position: relative;
+}
+.line:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 252px;
+    height: 2px;
+    background-color: #dddddd;
+    top: 34px;
+    left: 0;
+}
+
+
+.news__flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news-column{
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    margin: 0 30px 48px;
+    align-self: flex-start;
+    .chi-chi{
+        padding: 25px 20px 20px;
+        .column__chi-chi{
+            color: #055555;
+            font-family: "Playfair Display - Black";
+            font-size: 22px;
+            letter-spacing: 0.55px;
+            margin-bottom: 27px;
+        }
+        .column__content {
+            display: flex;
+            .column__avatar{
+                margin-right: 20px;
+            }
+            .column__item{
+                padding-top: 5px;
+                .column__author{
+                    font-weight: 700;
+                    letter-spacing: 0.4px;
+                    line-height: 17px;
+                    margin-bottom: 5px;
+                }
+                .column__icon{
+                    display: flex;
+                    color: #555555;
+                    font-size: 12px;
+                    font-weight: 300;
+                    letter-spacing: 0.3px;
+                    .time{
+                        position: relative;
+                        padding-left: 12px;
+                    }
+                    .time:before{
+                        content: url('../../img/icon/Clock_Icon.png');
+                        position: absolute;
+                        left: 0;
+                    }
+                    .coment{
+                        position: relative;
+                        padding-left: 20px;
+                    }
+                    .coment:before{
+                        content: url('../../img/icon/coment.png');
+                        position: absolute;
+                        left: 6px;
+                    }
+                    .see{
+                        position: relative;
+                        padding-left: 15px;
+                    }
+                    .see:before{
+                        content: url('../../img/icon/see.png');
+                        position: absolute;
+                        left: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.news-recipe{
+    padding: 28px 20px 30px 20px;
+    .column__recipe-row{
+        display: flex;
+        justify-content: space-between;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        margin-bottom: 27px;
+    }
+    .column__recipe-difficult{
+        display: flex;
+        justify-content:space-around;
+        opacity: 0.8;
+        color: #000000;
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: uppercase;
+        cursor:pointer;
+        margin-bottom: 25px;
+        .recipe-hover:hover{
+            color: #000000;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            transition: 0.5s;
+        }
+    }
+.column__btn{
+       display: flex;
+       justify-content: flex-end;
+    }
+    .column__content{
+        margin: 0 30px 30px 0;
+        .column__content-block{
+            display: flex;
+            .column__item{
+                padding-left: 16px;
+                .column__author{
+                    color: #000000;
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 0.3px;
+                    padding-bottom: 5px;
+                }
+                .column__text{
+                    max-width: 170px;
+                    color: #000000;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 16px;
+                    letter-spacing: 0.1px;
+                }
+            }
+        }
+    }
+}
+
+.popular{
+    background-image: url('../../img/News/popular/Photo.png');
+    padding: 27px 22px 0 17px;
+    min-height: 349px;
+    .popular__name{
+        color: #921026;
+        font-family: "Playfair Display - Black";
+        font-size: 32px;
+        letter-spacing: 0.8px;
+    }
+    .line:after{
+        background-color: #ffffff;
+    }
+    .popular__content{
+        margin-top: 35px;
+        .popular__content-head{
+            color: #000000;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.55px;
+            margin-bottom: 15px;
+        }
+        .popular__content-text{
+            color: #222222;
+            font-size: 16px;
+            letter-spacing: 0.4px;
+            max-width: 239px;
+            margin-bottom: 27px;
+        }
+        .popular__content-flex{
+            display: flex;
+            .column__icon{
+                display: flex;
+                color: #555555;
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 0.3px;
+                margin-left: 10px;
+                .time{
+                    position: relative;
+                    padding-left: 12px;
+                }
+                .time:before{
+                    content: url('../../img/icon/Clock_Icon.png');
+                    position: absolute;
+                    left: 0;
+                }
+                .coment{
+                    position: relative;
+                    padding-left: 20px;
+                }
+                .coment:before{
+                    content: url('../../img/icon/coment.png');
+                    position: absolute;
+                    left: 6px;
+                }
+                .see{
+                    position: relative;
+                    padding-left: 15px;
+                }
+                .see:before{
+                    content: url('../../img/icon/see.png');
+                    position: absolute;
+                    left: 2px;
+                }
+            }
+        }
+    }
+}
+
+
+
+//NEWS
+//ФАЙЛ ШАПКИ И ПОДВАЛА
+@import "header.scss";
+@import "footer.scss";
